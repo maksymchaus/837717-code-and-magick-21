@@ -179,15 +179,24 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
+
 <script>
+  "use strict"
+
   var fireballSize = 22;
 
   var wizardSpeed = 3;
 
   var wizardWidth = 70;
 
+  var speedOnWind = 5;
+
+  var speedOffWind = 2;
+
+  var KOF = 1.337;
+
   var getWizardHeight = function() {
-    return 1.337 * wizardWidth;
+    return KOF * wizardWidth;
   }
 
   var getWizardX = function(gameFieldWidth) {
@@ -199,7 +208,7 @@
   }
 
   var getFireballSpeed = function(isMovingLeft) {
-    return isMovingLeft ? 2 : 5;
+    return isMovingLeft ? speedOffWind : speedOnWind;
   }
 </script>
 <script src="js/stat.js"></script>
