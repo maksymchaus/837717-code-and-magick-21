@@ -72,9 +72,9 @@ var renderDiagram = function (ctx, names, times) {
     }
     ctx.fillRect(
       (CLOUD_X + GAP) + (GAP + BAR_WIDTH) * i,
-      (CLOUD_Y + GAP + FONT_GAP),
+      (CLOUD_Y + 150 + GAP + FONT_GAP),
       BAR_WIDTH,
-      (BAR_HEIGHT * times[i]) / maxTime
+      -(BAR_HEIGHT * times[i]) / maxTime
     );
   }
 };
