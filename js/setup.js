@@ -22,7 +22,7 @@ var getWizards = function () {
     data.push(getWizard());
   }
   return data;
-}
+};
 
 var wizardsMocks = getWizards();
 
